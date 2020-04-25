@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewRecycleID"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="120dp"
+    android:layout_height="165dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="12dp"
+    android:focusable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/titleImageViewID"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#1E2125"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/titleTextViewID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:background="@android:color/black"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

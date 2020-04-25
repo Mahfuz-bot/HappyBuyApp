@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Happy Buy</string>
+    <string name="username">username</string>
+    <string name="todo">TODO</string>
+    <string name="information">Information</string>
+    <string name="emailTag">Email:</string>
+    <string name="email_gmail_com">email@gmail.com</string>
+    <string name="addressTag">Address:</string>
+    <string name="adress"><![CDATA[&#189;, Sahidbagh, Dhaka, Bangladesh]]></string>
+    <string name="usernameTag">Username:</string>
+    <string name="passwordTag">Password:</string>
+    <string name="hidPass">******</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="phone_no">phone no.</string>
+    <string name="phoneTag">Phone:</string>
+    <string name="_phone">0121545256</string>
+    <string name="title">Title</string>
+    <string name="trending">Trending</string>
+    <string name="textview">TextView</string>
+    <string name="menu">Menu</string>
+    <string name="item">item</string>
+    <string name="categories">Categories</string>
+
+    <string-array name="products">
+
+        <item>Audible books &amp; Originals</item>
+        <item>Appliance</item>
+        <item>Apps &amp; Games</item>
+        <item>Arts &amp; Crafts</item>
+        <item>Automotive Parts &amp; Accessories</item>
+        <item>Baby</item>
+        <item>Beauty &amp; Personal Care</item>
+        <item>Books</item>
+        <item>Smart Phones &amp; Accessories</item>
+        <item>Shoes</item>
+        <item>Jewelry</item>
+        <item>Computers</item>
+        <item>Courses</item>
+        <item>Child\'s Clothing</item>
+        <item>Digital Music</item>
+        <item>Electronics</item>
+        <item>Gift Cards</item>
+        <item>Grocery &amp; Gourmet Food</item>
+        <item>Health</item>
+        <item>Household</item>
+        <item>Home &amp; Business Service</item>
+        <item>Kitchen</item>
+        <item>Industrial &amp; Scientific</item>
+        <item>Luggage &amp; Travel Care</item>
+        <item>Man\'s Clothing</item>
+        <item>Magazine Subscription</item>
+        <item>Magazine Subscription</item>
+        <item>Movies &amp; TV</item>
+        <item>Musical Instruments</item>
+        <item>Pet Supplies</item>
+        <item>Software</item>
+        <item>Sports &amp; Outdoors</item>
+        <item>Toys</item>
+        <item>Video Games</item>
+        <item>Vehicles</item>
+        <item>Women\'s Clothing</item>
+
+    </string-array>
+</resources>
