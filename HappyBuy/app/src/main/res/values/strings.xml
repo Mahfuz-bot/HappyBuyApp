@@ -24,6 +24,12 @@
     <string name="menu">Menu</string>
     <string name="item">item</string>
     <string name="categories">Categories</string>
+    <string name="c_o_m_p_u_t_e_r">C o m p u t e r</string>
+    <string name="e_q_u_i_p_m_e_n_t">E q u i p m e n t</string>
+    <string name="f_a_s_h_i_o_n">F a s h i o n</string>
+    <string name="f_o_o_d">F o o d</string>
+    <string name="h_e_a_l_t_h_c_a_r_e">H e a l t h c a r e</string>
+    <string name="s_p_o_r_t">S p o r t</string>
 
     <string-array name="products">
 

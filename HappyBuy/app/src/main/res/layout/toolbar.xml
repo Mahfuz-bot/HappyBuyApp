@@ -10,13 +10,12 @@
     tools:showIn="@layout/activity_main">
 
 
-    <View
-        android:id="@+id/view3"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarID"
         android:layout_width="0dp"
-        android:layout_height="104dp"
+        android:layout_height="63dp"
         android:background="@drawable/view_gradient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,15 +23,11 @@
         android:id="@+id/cartID"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/searchViewID"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintStart_toEndOf="@+id/menuID"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.53999996"
+        app:layout_constraintTop_toTopOf="@+id/toolbarID"
         app:srcCompat="@drawable/ic_shopping_cart" />
 
     <ImageView
@@ -40,31 +35,40 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="6dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/searchViewID"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarID"
+        app:layout_constraintEnd_toStartOf="@+id/cartID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbarID"
+        app:layout_constraintTop_toTopOf="@+id/toolbarID"
         app:srcCompat="@drawable/ic_menu" />
 
-    <SearchView
-        android:id="@+id/searchViewID"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/search_shape"
-        android:iconifiedByDefault="false"
-        android:inputType="none"
-        android:queryHint="What are you looking for?"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarID"
+        app:layout_constraintEnd_toStartOf="@+id/cartID"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintStart_toEndOf="@+id/menuID"
+        app:layout_constraintTop_toTopOf="@+id/toolbarID"
+        app:layout_constraintVertical_bias="0.53"
+        app:srcCompat="@drawable/ic_project_logo" />
+
+    <ImageView
+        android:id="@+id/searchViewID"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/cartID"
+        app:layout_constraintEnd_toStartOf="@+id/cartID"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogo"
+        app:layout_constraintTop_toTopOf="@+id/toolbarID"
+        app:srcCompat="@drawable/ic_search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
