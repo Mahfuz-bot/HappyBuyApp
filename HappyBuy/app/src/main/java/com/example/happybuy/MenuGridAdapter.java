@@ -1,6 +1,7 @@
 package com.example.happybuy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class MenuGridAdapter extends RecyclerView.Adapter<MenuGridAdapter.MyView
 
     private Context mContext;
     private List<HomeMenu> mData;
+    ItemClickListener itemClickListener;
 
     public MenuGridAdapter(Context mContext, List<HomeMenu> mData) {
         this.mContext = mContext;
@@ -36,14 +38,45 @@ public class MenuGridAdapter extends RecyclerView.Adapter<MenuGridAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         holder.menuTitle.setText(mData.get(position).getTitle());
         holder.menuImage.setImageResource(mData.get(position).getImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "clicked", Toast.LENGTH_SHORT).show();
+
+                if(mData.get(position).getTitle().equals("Computer")){
+
+                    Intent cIntent = new Intent(mContext,ComputerMenu.class);
+                    mContext.startActivity(cIntent);
+                }
+                 if(mData.get(position).getTitle().equals("Equipment")){
+
+                                    Intent eIntent = new Intent(mContext,EquipmentMenu.class);
+                                    mContext.startActivity(eIntent);
+                                }
+                 if(mData.get(position).getTitle().equals("Fashion")){
+
+                                    Intent fIntent = new Intent(mContext,FashionMenu.class);
+                                    mContext.startActivity(fIntent);
+                                }
+                 if(mData.get(position).getTitle().equals("Food")){
+
+                                    Intent fdIntent = new Intent(mContext,FoodMenu.class);
+                                    mContext.startActivity(fdIntent);
+                                }
+                 if(mData.get(position).getTitle().equals("HealthCare")){
+
+                                    Intent hcIntent = new Intent(mContext,HealthcareMenu.class);
+                                    mContext.startActivity(hcIntent);
+                                }
+                 if(mData.get(position).getTitle().equals("Sport")){
+
+                                    Intent sIntent = new Intent(mContext,SportMenu.class);
+                                    mContext.startActivity(sIntent);
+                                }
+
             }
         });
 
@@ -65,6 +98,7 @@ public class MenuGridAdapter extends RecyclerView.Adapter<MenuGridAdapter.MyView
             menuTitle = itemView.findViewById(R.id.menuTitleID);
             menuImage = itemView.findViewById(R.id.menuImageID);
             cardView = itemView.findViewById(R.id.menuMainID);
+
         }
     }
 }

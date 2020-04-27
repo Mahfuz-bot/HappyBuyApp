@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +16,25 @@ public class ComputerMenu extends AppCompatActivity {
 
 
     private List<Computer> computerModel;
+    private ImageView logoImageView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computer_menu);
+
+        logoImageView = findViewById(R.id.imageViewLogo);
+
+        logoImageView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v){
+                finish();
+                Intent logoIntent = new Intent(ComputerMenu.this, MainActivity.class);
+                startActivity(logoIntent);
+            }
+        });
 
         computerModel = new ArrayList<>();
         computerModel.add(new Computer(R.drawable.mac));

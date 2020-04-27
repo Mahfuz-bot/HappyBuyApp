@@ -1,19 +1,15 @@
 package com.example.happybuy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ScrollView;
-import android.widget.SearchView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.ViewCompat;
-import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,7 +22,6 @@ import com.glide.slider.library.slidertypes.TextSliderView;
 import com.glide.slider.library.tricks.ViewPagerEx;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
@@ -38,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Toolbar mToolbar;
     GridLayoutManager mGridLayoutManager;
    // private NestedScrollView mNestedScrollView;
+    private ImageView logoImageView, searchText;
+    private long backPressedTime;
+    private Toast backToast;
 
 
     @Override
@@ -46,6 +44,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
        // mNestedScrollView = findViewById(R.id.scrollHomeID);
+        logoImageView = findViewById(R.id.imageViewLogo);
+
+        logoImageView.setOnClickListener(this);
+
+        searchText = findViewById(R.id.searchViewID);
+        searchText.setOnClickListener(this);
 
         mToolbar = findViewById(R.id.myToolbar);
         //menu init
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mModel.add(new HomeMenu("Equipment", "Equipment", R.drawable.cogwheel));
         mModel.add(new HomeMenu("Fashion", "Fashion", R.drawable.hat));
         mModel.add(new HomeMenu("Food", "Food", R.drawable.restaurant));
-        mModel.add(new HomeMenu("Health Care", "Health Care", R.drawable.medicines));
+        mModel.add(new HomeMenu("HealthCare", "HealthCare", R.drawable.medicines));
         mModel.add(new HomeMenu("Sport", "Sport", R.drawable.running));
 
         RecyclerView menuRecyclerView = findViewById(R.id.menuRecycleViewID);
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setNestedScrollingEnabled(false);
 //        setSupportActionBar(mToolbar);
 
-        //scroll
+        //onItemClickListener
 
 
         //slider code
@@ -156,7 +160,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    public void onBackPressed() {
+        if(backPressedTime + 2000 > System.currentTimeMillis()){
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        }else {
+            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+            backPressedTime = System.currentTimeMillis();
+
+
+    }
+
+    @Override
     public void onClick(View v) {
+
+        if(v.getId()==R.id.imageViewLogo){
+            finish();
+            Intent logoIntent = new Intent(this,MainActivity.class);
+            startActivity(logoIntent);
+
+        }
+        if(v.getId()==R.id.searchViewID){
+
+            Intent searchIntent = new Intent(this,Search.class);
+            startActivity(searchIntent);
+//            onBackPressed();
+
+        }
+
+
 
     }
 

@@ -30,6 +30,7 @@
     <string name="f_o_o_d">F o o d</string>
     <string name="h_e_a_l_t_h_c_a_r_e">H e a l t h c a r e</string>
     <string name="s_p_o_r_t">S p o r t</string>
+    <string name="search">Search</string>
 
     <string-array name="products">
 

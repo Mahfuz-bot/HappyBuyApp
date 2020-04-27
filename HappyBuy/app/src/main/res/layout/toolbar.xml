@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_main">
 
 
-    <androidx.appcompat.widget.Toolbar
+    <View
         android:id="@+id/toolbarID"
         android:layout_width="0dp"
         android:layout_height="63dp"

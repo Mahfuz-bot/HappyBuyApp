@@ -5,8 +5,12 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#D0366C93</item>
     </style>
+
+
+
+
     <style name="GlideSliderCardStyle" parent="Base.CardView">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
@@ -47,5 +51,8 @@
         <item name="android:textColor">@color/glide_slider_description_color</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">sans-serif</item>
     </style>
+
+
+
 
 </resources>

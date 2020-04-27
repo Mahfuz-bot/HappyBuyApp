@@ -2,6 +2,7 @@ package com.example.happybuy;
 
 public class Computer {
     private int image;
+    private String title;
 
     public int getImage() {
         return image;
