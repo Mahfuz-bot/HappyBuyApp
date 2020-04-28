@@ -103,7 +103,7 @@ public class SearchAdapter extends BaseAdapter {
 
         return view;
     }
-    //filter
+//    filter
     public void filter(String charText){
         charText = charText.toLowerCase(Locale.getDefault());
         modelList.clear();

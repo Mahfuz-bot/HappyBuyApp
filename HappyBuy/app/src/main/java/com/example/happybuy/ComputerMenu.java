@@ -1,13 +1,13 @@
 package com.example.happybuy;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +16,22 @@ public class ComputerMenu extends AppCompatActivity {
 
 
     private List<Computer> computerModel;
-    private ImageView logoImageView;
+    private ImageView logoImageView, searchText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computer_menu);
-
+        searchText = findViewById(R.id.searchViewID);
+        searchText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent searchIntent = new Intent(ComputerMenu.this, Search.class);
+                startActivity(searchIntent);
+                finish();
+            }
+        });
         logoImageView = findViewById(R.id.imageViewLogo);
 
         logoImageView.setOnClickListener(new View.OnClickListener()
